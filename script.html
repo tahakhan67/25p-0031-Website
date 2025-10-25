@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RollNo Website — Your Name</title>
+  <meta name="description" content="Simple portfolio / project site. Replace content with your own." />
+
+  <style>
+    :root{
+      --maxw:1100px;
+      --accent: #0b74de;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#556;
+      --radius:12px;
+      --gap:18px;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#123;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:48px;
+      height:48px;
+      background:linear-gradient(135deg,var(--accent),#2ea);
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      color:white;
+      font-weight:700;
+      font-size:18px;
+    }
+    nav a{
+      margin-left:14px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+      border-radius:var(--radius);
+      padding:28px;
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:28px;
+      align-items:center;
+      margin-bottom:20px;
+      background-color:var(--card);
+      box-shadow:0 6px 22px rgba(20,30,60,0.06);
+    }
+    .hero h1{margin:0 0 8px;font-size:28px}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{
+      margin-top:14px;
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 20px rgba(20,30,60,0.04);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:var(--gap);
+      margin-bottom:22px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-top:18px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Replace ROLLNO and Your Name below -->
+  <!-- RollNo: ROLLNO -->
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">R</div>
+        <div>
+          <div style="font-weight:700">RollNo Website</div>
+          <div style="font-size:12px;color:var(--muted)">Your Name — Student Portfolio</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hello — I'm Your Name</h1>
+          <p>Student • Learner • Problem solver. This is a minimal website created for coursework. Replace sections with your actual content, projects, and contact details.</p>
+
+          <a class="cta" href="#projects">See my work</a>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin-top:0">Quick info</h3>
+          <p style="margin:8px 0 12px;color:var(--muted)">Roll Number: <strong>ROLLNO</strong></p>
+          <p style="margin:0;color:var(--muted);font-size:14px">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        </aside>
+      </section>
+
+      <section id="about" class="card" style="margin-bottom:18px">
+        <h2 style="margin-top:0">About</h2>
+        <p style="color:var(--muted)">Write a short paragraph about yourself here. For example: current program of study, year, interests, and what you're learning or building.</p>
+      </section>
+
+      <section id="projects" class="grid">
+        <div class="card">
+          <h3 style="margin-top:0">Project 1</h3>
+          <p style="color:var(--muted)">Short description of a project or assignment. Mention tools used (HTML, CSS, JavaScript).</p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Project 2</h3>
+          <p style="color:var(--muted)">Another small project description. Keep it concise and clear.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3 style="margin-top:0">Contact</h3>
+        <p style="color:var(--muted)">Want to get in touch? Send an email to <a href="mailto:you@example.com">you@example.com</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Your Name — RollNo: <strong>ROLLNO</strong></div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for anchor links (small enhancement)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
